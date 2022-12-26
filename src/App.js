@@ -4,10 +4,9 @@ function App() {
     const [param, setParam] = useState([]);
     const getCustomParams = async () => {
         const props = await axios
-            .get("https://test-netify-server.onrender.com", {})
+            .get("https://test-netify-server.onrender.com")
             .catch((err) => {
                 console.log(err);
-                let a = 0;
             });
         setParam(props.data);
     };
