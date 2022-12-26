@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const [param, setParam] = useState([]);
+    // const getCustomParams = async () => {
+    //     const props = await axios
+    //         .get("http://localhost:8000/api/test", {
+    //             headers: {
+    //                 Authorization: localStorage.getItem("token"),
+    //             },
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         });
+    //     setParam(props.data);
+    // };
+    // useEffect(() => {
+    //     getCustomParams();
+    // }, []);
+    // console.log(param);
+    const param = [1, 2, 3, 4, 5];
+    return (
+        <div className="App">
+            {param.map((p) => (
+                <div key={p}>{p}</div>
+            ))}
+        </div>
+    );
 }
 
 export default App;
