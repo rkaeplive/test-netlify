@@ -4,11 +4,7 @@ function App() {
     const [param, setParam] = useState([]);
     const getCustomParams = async () => {
         const props = await axios
-            .get("https://resilient-muffin-736b46.netlify.app/api/test", {
-                headers: {
-                    Authorization: localStorage.getItem("token"),
-                },
-            })
+            .get("https://test-netify-server.onrender.com", {})
             .catch((err) => {
                 console.log(err);
                 let a = 0;
