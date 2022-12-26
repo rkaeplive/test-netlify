@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+// import axios from "axios";
 function App() {
     // const [param, setParam] = useState([]);
     // const getCustomParams = async () => {
@@ -16,7 +16,7 @@ function App() {
     // };
     // useEffect(() => {
     //     getCustomParams();
-    // }, []);
+    // }, []);git add .
     // console.log(param);
     const param = [1, 2, 3, 4, 5];
     return (
